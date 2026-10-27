@@ -40,7 +40,7 @@ export function Backdrop() {
       <div className="absolute inset-y-0 right-0 w-full md:w-[66%] md:[mask-image:linear-gradient(to_right,transparent,#000_38%)]">
         <img
           ref={imgRef}
-          src="/images/emanuele.jpg"
+          src={import.meta.env.BASE_URL + 'images/emanuele.jpg'}
           alt=""
           width={1400}
           height={1400}

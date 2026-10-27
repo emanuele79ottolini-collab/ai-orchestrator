@@ -31,9 +31,9 @@ const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({'&': '&amp;', '<': '&l
 export function initForms(root: HTMLElement): () => void {
   const ac = new AbortController();
   const on = {signal: ac.signal};
-  const CFG: Cfg = {whatsapp: '', email: 'emanuele79.ottolini@gmail.com', endpoint: '/api/contatto.php', calendarEndpoint: '/api/calendario.php', bookingUrl: '', durataMinuti: 30, ...window.SITE_CONFIG};
+  const CFG: Cfg = {whatsapp: '', email: 'emanuele79.ottolini@gmail.com', endpoint: import.meta.env.BASE_URL + 'api/contatto.php', calendarEndpoint: import.meta.env.BASE_URL + 'api/calendario.php', bookingUrl: '', durataMinuti: 30, ...window.SITE_CONFIG};
   // config.js usa percorsi relativi ("api/..."): con le pagine in radice vanno resi assoluti.
-  const abs = (u: string) => (/^(https?:)?\/\//.test(u) || u.startsWith('/') ? u : `/${u}`);
+  const abs = (u: string) => (/^(https?:)?\/\//.test(u) || u.startsWith('/') ? u : import.meta.env.BASE_URL + u);
   CFG.endpoint = abs(CFG.endpoint);
   CFG.calendarEndpoint = abs(CFG.calendarEndpoint);
 

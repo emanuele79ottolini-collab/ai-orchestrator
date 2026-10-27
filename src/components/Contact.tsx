@@ -8,11 +8,11 @@ const Consent = () => (
     <input name="consenso" type="checkbox" required />
     <span>
       Acconsento al trattamento dei miei dati per essere ricontattato.{' '}
-      <a href="/privacy.html" target="_blank" rel="noopener">
+      <a href={import.meta.env.BASE_URL + 'privacy.html'} target="_blank" rel="noopener">
         Privacy
       </a>{' '}
       ·{' '}
-      <a href="/cookie.html" target="_blank" rel="noopener">
+      <a href={import.meta.env.BASE_URL + 'cookie.html'} target="_blank" rel="noopener">
         Cookie
       </a>
     </span>
@@ -129,11 +129,11 @@ export function Contact() {
                 </label>
                 <p className="fine">
                   Il sito non memorizza nulla.{' '}
-                  <a href="/privacy.html" target="_blank" rel="noopener">
+                  <a href={import.meta.env.BASE_URL + 'privacy.html'} target="_blank" rel="noopener">
                     Privacy
                   </a>{' '}
                   ·{' '}
-                  <a href="/cookie.html" target="_blank" rel="noopener">
+                  <a href={import.meta.env.BASE_URL + 'cookie.html'} target="_blank" rel="noopener">
                     Cookie
                   </a>
                 </p>

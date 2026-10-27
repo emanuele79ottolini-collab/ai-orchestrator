@@ -72,11 +72,11 @@ export function Footer() {
         </span>
         <span>
           {brand.place} · {' '}
-          <a href="/privacy.html" className="text-[#b8b8be] hover:text-white">
+          <a href={import.meta.env.BASE_URL + 'privacy.html'} className="text-[#b8b8be] hover:text-white">
             Privacy
           </a>{' '}
           ·{' '}
-          <a href="/cookie.html" className="text-[#b8b8be] hover:text-white">
+          <a href={import.meta.env.BASE_URL + 'cookie.html'} className="text-[#b8b8be] hover:text-white">
             Cookie
           </a>
         </span>
