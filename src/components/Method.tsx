@@ -184,15 +184,14 @@ export function Method() {
         </div>
 
         {/* Tappa in corso. */}
-        <div className="grid gap-4 border-t border-white/10 pt-5 md:grid-cols-[auto_1fr_auto] md:items-end md:gap-10">
+        <div className="grid gap-3 rounded-[10px] bg-void/80 px-5 py-4 ring-1 ring-white/10 backdrop-blur-md md:grid-cols-[auto_1fr_auto] md:items-center md:gap-10 md:px-7 md:py-5">
           <p className="font-mono text-label text-sky uppercase">
             {current.day} · {leg + 1}/{method.legs.length}
           </p>
           <div key={leg} className="animate-[leg-in_0.6s_cubic-bezier(0.2,0.7,0.1,1)]" aria-live="polite">
             <h3 className="text-[1.125rem] font-medium tracking-[-0.01em] text-white md:text-[1.375rem]">{current.title}</h3>
-            <p className="mt-1.5 max-w-[40rem] text-body text-mist/80">
-              {current.body} <span className="font-mono text-label text-dust uppercase">· {current.tag}</span>
-            </p>
+            <p className="mt-1.5 max-w-[40rem] text-body text-white/90">{current.body}</p>
+            <p className="mt-2 font-mono text-label text-ember uppercase">{current.tag}</p>
           </div>
           <div className="flex gap-1.5" aria-hidden="true">
             {method.legs.map((_, i) => (
