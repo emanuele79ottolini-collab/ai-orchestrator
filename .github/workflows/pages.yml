@@ -23,6 +23,8 @@ jobs:
       - run: npm run build
         env:
           BASE_PATH: /ai-orchestrator/
+      - name: Su Pages niente PHP (non viene eseguito)
+        run: rm -rf dist/api dist/.htaccess
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
