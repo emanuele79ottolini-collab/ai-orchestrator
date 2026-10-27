@@ -12,24 +12,8 @@ import {onFrame} from '../lib/scroll';
 const SECTION_VH = 340;
 const TINTS = ['255,138,61', '127,200,255', '255,190,140', '90,140,255'];
 
-/** Anelli concentrici e satelliti: un disegno diverso per ogni servizio. */
-function Glyph({n}: {n: number}) {
-  const rings = n + 2;
-  return (
-    <svg aria-hidden="true" viewBox="0 0 200 260" className="absolute inset-0 size-full">
-      <g transform="translate(100 130)" fill="none" stroke={`rgb(${TINTS[n]})`} strokeOpacity="0.55">
-        {Array.from({length: rings}, (_, k) => (
-          <ellipse key={k} rx={22 + k * 15} ry={10 + k * 9} transform={`rotate(${-24 + k * 16 + n * 22})`} />
-        ))}
-        <circle r="7" fill={`rgb(${TINTS[n]})`} stroke="none" />
-        {Array.from({length: 5 + n}, (_, k) => {
-          const a = (k / (5 + n)) * Math.PI * 2 + n;
-          return <circle key={k} cx={Math.cos(a) * (40 + (k % 3) * 20)} cy={Math.sin(a) * (22 + (k % 3) * 14)} r="2.6" fill="#fff" stroke="none" opacity="0.8" />;
-        })}
-      </g>
-    </svg>
-  );
-}
+/** Una foto per servizio, in ordine: analisi, agenti, automazioni, persone. */
+const PHOTOS = ['servizio-analisi', 'servizio-agenti', 'servizio-automazioni', 'servizio-persone'];
 
 export function Services() {
   const rootRef = useRef<HTMLElement>(null);
@@ -125,10 +109,14 @@ export function Services() {
                         if (el) visRefs.current[i] = el;
                       }}
                       className="absolute inset-0 will-change-transform"
-                      style={{background: `radial-gradient(70% 55% at 50% 48%, rgba(${TINTS[i]},0.16), transparent 70%)`}}
                     >
-                      <Glyph n={i} />
+                      <img src={`${import.meta.env.BASE_URL}images/${PHOTOS[i]}.jpg`} alt="" width={900} height={1100} decoding="async" className="size-full object-cover" />
                     </div>
+                    <div
+                      aria-hidden="true"
+                      className="absolute inset-0"
+                      style={{background: `linear-gradient(to bottom, rgba(11,11,13,0.35), rgba(11,11,13,0) 30%, rgba(11,11,13,0.2) 55%, rgba(11,11,13,0.88)), radial-gradient(80% 60% at 50% 40%, rgba(${TINTS[i]},0.14), transparent 75%)`}}
+                    />
                     <span className="absolute top-3 left-3 rounded-[3px] bg-void/70 px-2 py-1 font-mono text-[0.625rem] tracking-[0.14em] text-white uppercase backdrop-blur">{s.tag}</span>
                     <div className="absolute inset-x-3 bottom-3 flex flex-wrap gap-1.5">
                       {s.chips.map((c) => (

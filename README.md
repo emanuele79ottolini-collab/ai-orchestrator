@@ -23,3 +23,7 @@ npx vite preview --port=3006 --host=127.0.0.1
 
 - La chiave dell'account di servizio Google non va mai nel repository: sta fuori da `public_html` (vedi `GUIDA-GOOGLE-CALENDAR.md`).
 - Lavorare fuori da Google Drive: `node_modules` dà errore EBADF.
+
+## Crediti immagini
+
+Le foto delle schede Servizi (`public/images/servizio-*.jpg`) sono su [Unsplash](https://unsplash.com), licenza Unsplash (uso libero, attribuzione non obbligatoria): analisi (Apex Virtual Education), agenti (Jakub Żerdzicki), automazioni e persone (Paymo).
