@@ -16,16 +16,17 @@ const TOOLS = 10;
 
 const CHAOS = {cx: 230, cy: 320, r: 92};
 const SYSTEM = {cx: 985, cy: 300, r: 46};
+const ORBIT = 86;
 
 const LEGS = [
   // Mappa: un giro e un po' intorno al caos.
   `M${CHAOS.cx} ${CHAOS.cy - 128} a128 128 0 1 1 -0.1 0 a128 128 0 0 1 106 57`,
   // Disegna: la traiettoria dal caos al sistema.
-  `M${CHAOS.cx + 106} ${CHAOS.cy - 71} C 520 40, 820 70, ${SYSTEM.cx - 20} ${SYSTEM.cy - 84}`,
-  // Orchestra: si entra in orbita intorno al sistema.
-  `M${SYSTEM.cx - 20} ${SYSTEM.cy - 84} a86 86 0 1 1 -0.1 0.2 a86 86 0 0 1 20 1`,
+  `M${CHAOS.cx + 106} ${CHAOS.cy - 71} C 520 40, 820 70, ${SYSTEM.cx} ${SYSTEM.cy - ORBIT}`,
+  // Orchestra: un giro completo in orbita, con il centro esattamente sul sistema.
+  `M${SYSTEM.cx} ${SYSTEM.cy - ORBIT} a${ORBIT} ${ORBIT} 0 1 1 0 ${ORBIT * 2} a${ORBIT} ${ORBIT} 0 1 1 0 ${-ORBIT * 2}`,
   // Misura: l'ultimo tratto verso il risultato.
-  `M${SYSTEM.cx} ${SYSTEM.cy - 86} Q ${SYSTEM.cx + 40} ${SYSTEM.cy - 70} ${SYSTEM.cx + 30} ${SYSTEM.cy - 36}`,
+  `M${SYSTEM.cx} ${SYSTEM.cy - ORBIT} Q ${SYSTEM.cx + 40} ${SYSTEM.cy - 70} ${SYSTEM.cx + 30} ${SYSTEM.cy - 36}`,
 ];
 
 /** Punti sparsi, fissi, dentro il cerchio del caos. */
