@@ -67,7 +67,7 @@ export function Hero() {
   useEffect(() => {
     const cs = [dustRef.current!, auroraRef.current!];
     const sync = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1.5 : 2);
       cs.forEach((c) => {
         c.width = Math.round(c.clientWidth * dpr);
         c.height = Math.round(c.clientHeight * dpr);

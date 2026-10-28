@@ -56,7 +56,7 @@
 /* moduli di contatto */
 .panel{width:100%;max-width:760px;text-align:left;background:rgba(21,21,23,.78);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:24px;padding:8px;box-shadow:0 40px 90px rgba(0,0,0,.4)}
 .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:5px;background:#0f0f10;border-radius:18px}
-.tab{font:500 14px/1 var(--body);color:var(--muted);background:transparent;border:0;border-radius:13px;padding:14px 10px;cursor:pointer;transition:background .2s,color .2s}
+.tab{min-height:44px;font:500 14px/1 var(--body);color:var(--muted);background:transparent;border:0;border-radius:13px;padding:14px 10px;cursor:pointer;transition:background .2s,color .2s}
 .tab:hover{color:var(--fg)}
 .tab[aria-selected="true"]{background:var(--fg);color:var(--bg)}
 .tab:focus-visible{outline:2px solid var(--aurora-b);outline-offset:2px}
@@ -93,7 +93,7 @@
 .fine a{color:#b8b8be}
 .mail{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;font-family:var(--mono);font-size:14px;color:var(--muted)}
 .mail code{user-select:all;color:var(--fg);font-family:inherit;word-break:break-all}
-.copybtn{font:500 13px var(--body);background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.copybtn{min-height:40px;font:500 13px var(--body);background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
 .copybtn:hover{background:rgba(255,255,255,.06)}
 
 @media (max-width:900px){.live{grid-template-columns:1fr;gap:40px}}

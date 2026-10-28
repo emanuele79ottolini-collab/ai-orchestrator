@@ -26,11 +26,25 @@ function Progress() {
 
 export function Header() {
   const [open, setOpen] = useState(false);
+
+  // Menu aperto: la pagina sotto resta ferma, Esc chiude.
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.documentElement.style.overflow = prev;
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 text-white">
       <Progress />
       <div className="flex items-center justify-between px-4 pt-4 sm:px-6 sm:pt-5 md:px-[4vw]">
-        <a href="#top" onClick={(e) => go(e)} className="flex items-center gap-2.5" aria-label={`${brand.name} — torna in cima`}>
+        <a href="#top" onClick={(e) => go(e)} className="-my-2.5 flex items-center gap-2.5 py-2.5" aria-label={`${brand.name} — torna in cima`}>
           <i className="inline-block size-2.5 rounded-full bg-[linear-gradient(135deg,var(--color-ember),var(--color-sky))]" />
           <span className="text-[0.9375rem] font-semibold tracking-[-0.01em]">{brand.name}</span>
         </a>
@@ -44,7 +58,7 @@ export function Header() {
             Prenota una call
           </a>
         </nav>
-        <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="menu" className="font-mono text-label uppercase md:hidden">
+        <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="menu" className="-my-3 -mr-3 px-3 py-3.5 font-mono text-label uppercase md:hidden">
           {open ? 'Chiudi' : 'Menu'}
         </button>
       </div>
@@ -72,11 +86,11 @@ export function Footer() {
         </span>
         <span>
           {brand.place} · {' '}
-          <a href={import.meta.env.BASE_URL + 'privacy.html'} className="text-[#b8b8be] hover:text-white">
+          <a href={import.meta.env.BASE_URL + 'privacy.html'} className="-my-2.5 inline-block py-2.5 text-[#b8b8be] hover:text-white">
             Privacy
           </a>{' '}
           ·{' '}
-          <a href={import.meta.env.BASE_URL + 'cookie.html'} className="text-[#b8b8be] hover:text-white">
+          <a href={import.meta.env.BASE_URL + 'cookie.html'} className="-my-2.5 inline-block py-2.5 text-[#b8b8be] hover:text-white">
             Cookie
           </a>
         </span>
