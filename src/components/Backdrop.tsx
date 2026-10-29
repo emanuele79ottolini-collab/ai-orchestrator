@@ -31,7 +31,7 @@ export function Backdrop() {
       if (Math.abs(key - last) < 0.01) return;
       last = key;
       dimRef.current!.style.opacity = String(1 - level);
-      imgRef.current!.style.transform = `translate3d(0, ${-Math.min(y, 6000) * 0.015}px, 0) scale(1.06)`;
+      imgRef.current!.style.transform = `translate3d(0, ${-Math.min(y, 1600) * 0.015}px, 0) scale(1.06)`;
     });
   }, []);
 
@@ -42,8 +42,8 @@ export function Backdrop() {
           ref={imgRef}
           src={import.meta.env.BASE_URL + 'images/emanuele.jpg'}
           alt=""
-          width={1400}
-          height={1400}
+          width={1600}
+          height={1600}
           fetchPriority="high"
           decoding="async"
           className="size-full object-cover object-[42%_0%] will-change-transform md:object-[50%_18%]"
