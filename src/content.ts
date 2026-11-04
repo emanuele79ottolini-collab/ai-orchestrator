@@ -25,9 +25,9 @@ export const hero = {
   cta2: 'Come lavoro',
   site: 'Verona · 45.44°N 10.99°E',
   floats: [
-    {title: 'Richiesta cliente gestita', meta: 'EMAIL → CRM · 2 SEC'},
-    {title: 'Preventivo in bozza', meta: 'PRONTO PER LA TUA FIRMA'},
-    {title: 'Report settimanale inviato', meta: 'OGNI VENERDÌ · 08:00'},
+    {title: 'Richiesta cliente gestita', meta: 'ESEMPIO · EMAIL → CRM'},
+    {title: 'Preventivo in bozza', meta: 'ESEMPIO · PRONTO PER LA FIRMA'},
+    {title: 'Report settimanale inviato', meta: 'ESEMPIO · OGNI VENERDÌ 08:00'},
   ],
   sig: [
     {t: 'Sicuro per design', s: 'Background in cybersecurity'},
