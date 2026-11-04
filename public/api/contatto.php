@@ -68,8 +68,6 @@ if (count($storico) >= MAX_ORA)                    rispondi(429, ['ok' => false,
 $tipo     = ($in['tipo'] ?? '') === 'appuntamento' ? 'appuntamento' : 'email';
 $nome     = pulisci($in['nome'] ?? '', 80);
 $email    = pulisci($in['email'] ?? '', 120);
-$telefono = pulisci($in['telefono'] ?? '', 30);
-$oggetto  = pulisci($in['oggetto'] ?? '', 120);
 $messaggio = pulisci($in['messaggio'] ?? '', 2000, true);
 
 if ($nome === '')                                  rispondi(422, ['ok' => false, 'errore' => 'Inserisci il tuo nome.']);
@@ -108,9 +106,8 @@ if ($tipo === 'appuntamento') {
     if ($messaggio !== '') { $righe[] = ''; $righe[] = "Tema:"; $righe[] = $messaggio; }
     $righe[] = ''; $righe[] = 'Aggiungi al tuo Google Calendar (invita anche il cliente):'; $righe[] = $linkCalendar;
 } else {
-    $subject = 'Richiesta dal sito' . ($oggetto !== '' ? ": $oggetto" : " di $nome");
+    $subject = "Richiesta dal sito di $nome";
     $righe = ["Nuova richiesta dal sito.", "", "Nome: $nome", "Email: $email"];
-    if ($telefono !== '') $righe[] = "Telefono: $telefono";
     $righe[] = ''; $righe[] = $messaggio;
 }
 $righe[] = ''; $righe[] = '— Inviato dal modulo del sito';

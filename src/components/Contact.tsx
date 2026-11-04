@@ -7,7 +7,7 @@ const Consent = () => (
   <label className="chk">
     <input name="consenso" type="checkbox" required />
     <span>
-      Acconsento al trattamento dei miei dati per essere ricontattato.{' '}
+      Acconsento al trattamento dei miei dati per essere ricontattato. Titolare: Emanuele Ottolini. Uso i dati solo per risponderti e li conservo al massimo 12 mesi.{' '}
       <a href={import.meta.env.BASE_URL + 'privacy.html'} target="_blank" rel="noopener">
         Privacy
       </a>{' '}
@@ -158,18 +158,6 @@ export function Contact() {
                   <label>
                     Email
                     <input name="email" type="email" autoComplete="email" required maxLength={120} />
-                  </label>
-                </div>
-                <div className="row">
-                  <label>
-                    <span>
-                      Telefono <span className="opt">(facoltativo)</span>
-                    </span>
-                    <input name="telefono" type="tel" autoComplete="tel" maxLength={30} />
-                  </label>
-                  <label>
-                    Oggetto
-                    <input name="oggetto" type="text" maxLength={120} placeholder="Richiesta di informazioni" />
                   </label>
                 </div>
                 <label>

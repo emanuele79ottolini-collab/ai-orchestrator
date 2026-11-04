@@ -153,7 +153,7 @@ export function initForms(root: HTMLElement): () => void {
           status(fe, '');
         };
       } else if (r.fallback) {
-        location.href = mailto(d.oggetto || 'Richiesta dal sito', `${d.messaggio}\n\n${d.nome}${d.telefono ? ` · ${d.telefono}` : ''} · ${d.email}`);
+        location.href = mailto('Richiesta dal sito', `${d.messaggio}\n\n${d.nome} · ${d.email}`);
         status(fe, 'Non riesco a inviare da qui: si è aperta la tua app di posta con il messaggio già pronto.');
       } else status(fe, r.errore || 'Invio non riuscito. Riprova tra poco.', true);
     },
