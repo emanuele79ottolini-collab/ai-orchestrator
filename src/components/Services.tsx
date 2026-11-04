@@ -64,7 +64,7 @@ export function Services() {
 
   return (
     <>
-      <div className="marquee" aria-label="Strumenti che collego">
+      <div className="marquee" role="img" aria-label={`Strumenti che collego: ${tools.join(', ')}`}>
         <div className="track" aria-hidden="true">
           {loop.map((t, i) => (
             <span key={i}>{t}</span>
