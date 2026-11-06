@@ -85,7 +85,6 @@ export function Footer() {
           © {new Date().getFullYear()} {brand.name} · {brand.tagline}
         </span>
         <span>
-          {brand.place} · {' '}
           <a href={import.meta.env.BASE_URL + 'privacy.html'} className="-my-2.5 inline-block py-2.5 text-[#b8b8be] hover:text-white">
             Privacy
           </a>{' '}

@@ -1,6 +1,6 @@
 # AI Orchestrator
 
-Landing page di Emanuele Ottolini, AI Orchestrator (tutta Italia).
+Landing page di Emanuele Ottolini, AI Orchestrator.
 
 Vite 6 + React 19 + TypeScript + Tailwind CSS v4 + Lenis. Font Geist self-hosted, nessun cookie, nessuna richiesta a servizi esterni.
 

@@ -6,7 +6,6 @@ export const brand = {
   name: 'Emanuele Ottolini',
   tagline: 'AI Orchestrator',
   email: 'emanuele79.ottolini@gmail.com',
-  place: 'Tutta Italia',
 };
 
 export const nav = [
@@ -17,13 +16,13 @@ export const nav = [
 ];
 
 export const hero = {
-  kicker: 'AI Orchestrator · Tutta Italia',
+  kicker: 'Landing page · Automazioni · IA',
   title: ['AI', 'ORCHESTRATOR'],
   lead: ['Oggi l’IA non basta averla.', 'Bisogna saperla usare.'],
   body: 'Costruisco la tua landing page: una pagina che spiega chi sei e cosa fai, e raccoglie le richieste. Poi ti aiuto a togliere le cose che fanno perdere tempo (email, preventivi, report, dati copiati a mano) con assistenti e automazioni su misura.',
   cta: 'Prenota una call gratuita',
   cta2: 'Come lavoro',
-  site: 'Tutta Italia · da remoto',
+  site: 'Consulenza · Automazioni · Landing page',
   floats: [
     {title: 'Richiesta cliente gestita', meta: 'ESEMPIO · EMAIL → CRM'},
     {title: 'Preventivo in bozza', meta: 'ESEMPIO · PRONTO PER LA FIRMA'},
