@@ -12,8 +12,8 @@ import {onFrame} from '../lib/scroll';
 const SECTION_VH = 340;
 const TINTS = ['255,138,61', '127,200,255', '255,190,140', '255,138,61', '90,140,255'];
 
-/** Una foto per servizio, in ordine: analisi, agenti, automazioni, landing page, persone. */
-const PHOTOS = ['servizio-analisi', 'servizio-agenti', 'servizio-automazioni', 'servizio-landing', 'servizio-persone'];
+/** Una foto per servizio, in ordine: landing page, analisi, agenti, automazioni, persone. */
+const PHOTOS = ['servizio-landing', 'servizio-analisi', 'servizio-agenti', 'servizio-automazioni', 'servizio-persone'];
 
 export function Services() {
   const rootRef = useRef<HTMLElement>(null);

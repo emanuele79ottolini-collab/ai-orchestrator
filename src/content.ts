@@ -20,7 +20,7 @@ export const hero = {
   kicker: 'AI Orchestrator · Tutta Italia',
   title: ['AI', 'ORCHESTRATOR'],
   lead: ['Oggi l’IA non basta averla.', 'Bisogna saperla usare.'],
-  body: 'Ti aiuto a togliere dal tuo lavoro le cose che fanno perdere tempo: email, preventivi, report, dati copiati a mano. Costruisco assistenti e automazioni su misura, e la landing page che presenta la tua offerta e raccoglie le richieste.',
+  body: 'Costruisco la tua landing page: una pagina che spiega chi sei e cosa fai, e raccoglie le richieste. Poi ti aiuto a togliere le cose che fanno perdere tempo (email, preventivi, report, dati copiati a mano) con assistenti e automazioni su misura.',
   cta: 'Prenota una call gratuita',
   cta2: 'Come lavoro',
   site: 'Tutta Italia · da remoto',
@@ -36,17 +36,17 @@ export const hero = {
   ],
 };
 
-export const tools = ['ChatGPT', 'Claude', 'n8n', 'Make', 'Google Workspace', 'WhatsApp', 'Gmail', 'Calendario', 'CRM', 'Excel', 'Drive', 'Fatture', 'Slack', 'Notion'];
+export const tools = ['ChatGPT', 'Claude', 'n8n', 'Google Workspace', 'WhatsApp', 'Gmail', 'Calendario', 'CRM', 'Excel', 'Drive', 'Fatture', 'Notion'];
 
 export const services = {
   eyebrow: 'Servizi',
   heading: 'Meno tempo perso. Più tempo per il tuo lavoro.',
-  body: 'Chi usa bene l’intelligenza artificiale lavora più in fretta e risponde prima ai clienti. Non serve diventare esperti: serve qualcuno che costruisca il sistema giusto per te.',
+  body: 'Si parte da una pagina che spiega chi sei e cosa offri. Poi l’intelligenza artificiale toglie i lavori che fanno perdere tempo: non serve diventare esperti, serve qualcuno che costruisca il sistema giusto per te.',
   items: [
+    {tag: 'Landing Page', title: 'La tua landing page su misura', body: 'È la tua presentazione online: spiega chi sei, cosa fai e come lavori, in modo chiaro, e fa arrivare le richieste. La progetto, la costruisco e la metto online io, collegata a email e calendario.', chips: ['Progetto', 'Costruzione', 'Messa online']},
     {tag: 'Analisi', title: 'Capisco dove perdi tempo', body: 'Guardiamo insieme la tua giornata e troviamo i lavori ripetitivi che si possono togliere o velocizzare.', chips: ['Mappa attività', 'Priorità', 'Stima ore']},
     {tag: 'Agenti', title: 'Un assistente che lavora per te', body: 'Risponde ai clienti, prepara documenti, ricorda i solleciti. Con le tue regole, sempre sotto il tuo controllo.', chips: ['Claude', 'ChatGPT', 'WhatsApp']},
-    {tag: 'Automazioni', title: 'Gli strumenti che parlano tra loro', body: 'Email, calendario, fogli e gestionale collegati: i dati passano da soli, senza copia e incolla.', chips: ['n8n', 'Make', 'Google Workspace']},
-    {tag: 'Landing Page', title: 'Landing page su misura', body: 'Una pagina chiara, veloce e pensata per te, che presenta la tua offerta e fa arrivare le richieste. La progetto, la costruisco e la metto online io, collegata a email e calendario.', chips: ['Progetto', 'Costruzione', 'Messa online']},
+    {tag: 'Automazioni', title: 'Gli strumenti che parlano tra loro', body: 'Email, calendario, fogli e gestionale collegati: i dati passano da soli, senza copia e incolla.', chips: ['n8n', 'Google Workspace', 'Gmail']},
     {tag: 'Persone', title: 'Formazione per il tuo team', body: 'Impari a usare l’IA nel lavoro di ogni giorno, con esempi dei tuoi casi reali.', chips: ['Workshop', 'Prompt', 'Sicurezza dati']},
   ],
 };
@@ -74,7 +74,7 @@ export const method = {
   legs: [
     {day: 'Passo 1 · Ascolto', title: 'Mappa', body: 'Una call gratuita per capire cosa ti fa perdere tempo, quali strumenti usi e dove vuoi arrivare.', tag: 'Call gratuita'},
     {day: 'Passo 2 · Progetto', title: 'Disegna', body: 'Ti presento il sistema: chi fa cosa, quali dati, quanto tempo risparmi.', tag: 'Proposta scritta'},
-    {day: 'Passo 3 · Regia', title: 'Orchestra', body: 'Costruisco agenti e automazioni collegati ai tuoi strumenti e, se serve, la tua landing page.', tag: 'Messa in opera'},
+    {day: 'Passo 3 · Regia', title: 'Orchestra', body: 'Costruisco la tua landing page, gli agenti e le automazioni, collegati ai tuoi strumenti.', tag: 'Messa in opera'},
     {day: 'Passo 4 · Crescita', title: 'Misura', body: 'Controlliamo i risultati e miglioriamo il sistema nel tempo.', tag: 'Supporto continuo'},
   ],
 };
