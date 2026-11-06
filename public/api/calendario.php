@@ -231,7 +231,7 @@ $okMail = mail($CFG['destinatario'], mb_encode_mimeheader("Richiesta appuntament
 if ($inCalendario || $okMail) {
     // conferma di ricezione al cliente: testo fisso, nessun contenuto scelto da chi compila
     @mail($email, mb_encode_mimeheader("Richiesta ricevuta: call del $quando", 'UTF-8', 'B'),
-        implode("\r\n", ["Ciao $nome,", '', "ho ricevuto la tua richiesta per una call il $quando (durata " . (int)$CFG['durata'] . " minuti).", 'Ti confermo l\'appuntamento a breve, rispondendo a questo messaggio.', '', 'Emanuele Ottolini', 'AI Orchestrator · Verona']),
+        implode("\r\n", ["Ciao $nome,", '', "ho ricevuto la tua richiesta per una call il $quando (durata " . (int)$CFG['durata'] . " minuti).", 'Ti confermo l\'appuntamento a breve, rispondendo a questo messaggio.', '', 'Emanuele Ottolini', 'AI Orchestrator']),
         implode("\r\n", array_merge($base, ['From: ' . $da, 'Reply-To: ' . $CFG['destinatario']])));
     registra($fileLim, $storico);
     rispondi(200, ['ok' => true, 'calendario' => $inCalendario]);

@@ -6,7 +6,7 @@ export const brand = {
   name: 'Emanuele Ottolini',
   tagline: 'AI Orchestrator',
   email: 'emanuele79.ottolini@gmail.com',
-  place: 'Verona',
+  place: 'Tutta Italia',
 };
 
 export const nav = [
@@ -17,13 +17,13 @@ export const nav = [
 ];
 
 export const hero = {
-  kicker: 'AI Orchestrator · Verona',
+  kicker: 'AI Orchestrator · Tutta Italia',
   title: ['AI', 'ORCHESTRATOR'],
   lead: ['Oggi l’IA non basta averla.', 'Bisogna saperla usare.'],
   body: 'Ti aiuto a togliere dal tuo lavoro le cose che fanno perdere tempo: email, preventivi, report, dati copiati a mano. Costruisco assistenti e automazioni su misura, e la landing page che presenta la tua offerta e raccoglie le richieste.',
   cta: 'Prenota una call gratuita',
   cta2: 'Come lavoro',
-  site: 'Verona · 45.44°N 10.99°E',
+  site: 'Tutta Italia · da remoto',
   floats: [
     {title: 'Richiesta cliente gestita', meta: 'ESEMPIO · EMAIL → CRM'},
     {title: 'Preventivo in bozza', meta: 'ESEMPIO · PRONTO PER LA FIRMA'},
