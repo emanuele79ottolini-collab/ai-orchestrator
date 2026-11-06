@@ -253,7 +253,7 @@ export function Hero() {
           <div ref={blockRef} className="w-full max-w-[34rem] will-change-transform md:max-w-[46rem]">
             <p className="font-mono text-label text-sky uppercase">{hero.kicker}</p>
             <h1 ref={titleRef} className="mt-4 text-hero font-semibold text-white [text-shadow:0_4px_40px_rgb(0_0_0/0.5)]" style={{opacity: 0, letterSpacing: '0.5em'}}>
-              <span className="sr-only">AI Orchestrator</span>
+              <span className="sr-only">AI Orchestrator: Emanuele Ottolini, automazioni, assistenti IA e landing page per tutta Italia</span>
               <span aria-hidden="true">
                 {hero.title[0]}
                 <br />
