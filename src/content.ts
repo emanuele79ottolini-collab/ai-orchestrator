@@ -81,8 +81,8 @@ export const method = {
 
 export const about = {
   eyebrow: 'Chi sono',
-  quote: 'Sono un sistemista, non un venditore di app. Costruisco cose che funzionano.',
-  p1: 'Mi chiamo Emanuele. Lavoro da anni nell’amministrazione di sistemi e nella cybersecurity, dove un errore costa caro. Porto lo stesso rigore nell’intelligenza artificiale.',
+  quote: 'Mi occupo di cybersecurity, non vendo app. Costruisco cose che funzionano.',
+  p1: 'Mi chiamo Emanuele. Mi occupo da anni di cybersecurity, dove un errore costa caro. Porto lo stesso rigore nell’intelligenza artificiale.',
   p2: 'Il mio obiettivo è semplice: semplificare il lavoro complesso con automazioni e un’organizzazione chiara, e generare valore concreto per chi collabora con me. Non ti vendo tecnologia: ti tolgo il lavoro che ti ruba tempo.',
 };
 
