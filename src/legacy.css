@@ -34,6 +34,7 @@
 .flow text{font-family:var(--mono);font-size:13px;fill:#d6d6d4;text-anchor:middle;dominant-baseline:central}
 .flow .core{fill:url(#cg);filter:drop-shadow(0 0 22px rgba(255,138,61,.45))}
 .flow .core-t{fill:#0d0d0e;font-weight:500;font-size:13px}
+@media (max-width:767px){.flow text{font-size:17px}.flow .core-t{font-size:14px}}
 .flow .dot{fill:var(--aurora-a);filter:drop-shadow(0 0 6px rgba(255,138,61,.9))}
 .flow .dot.b{fill:var(--aurora-b);filter:drop-shadow(0 0 6px rgba(127,200,255,.9))}
 .flow .g.on rect.nd{stroke:var(--aurora-b);fill:#1b2026}

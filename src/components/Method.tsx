@@ -92,7 +92,7 @@ export function Method() {
               {method.heading}
             </h2>
           </div>
-          <p className="font-mono text-label text-mist/70 uppercase" aria-live="off">
+          <p className="font-mono text-label text-mist/80 uppercase max-md:text-[0.8125rem]" aria-live="off">
             {method.counter} <span ref={countRef} className="text-white tabular-nums">0</span> / {TOOLS}
           </p>
         </div>
@@ -172,7 +172,8 @@ export function Method() {
               <circle r="4.5" fill="#fff" />
             </g>
 
-            <g fontFamily="Geist Mono, monospace" fontSize="13" letterSpacing="2" fill="#a9acb4">
+            {/* Su telefono l'immagine è ridotta a un terzo: le scritte crescono di pari passo (circa 13px a schermo). */}
+            <g fontFamily="Geist Mono, monospace" fill="#c4c7ce" className="text-[14px] [letter-spacing:2px] max-md:text-[46px] max-md:[letter-spacing:6px]">
               <text x={CHAOS.cx} y={CHAOS.cy + CHAOS.r + 58} textAnchor="middle">
                 CAOS
               </text>
@@ -185,13 +186,13 @@ export function Method() {
 
         {/* Tappa in corso. */}
         <div className="grid gap-3 rounded-[10px] bg-void/80 px-5 py-4 ring-1 ring-white/10 backdrop-blur-md md:grid-cols-[auto_1fr_auto] md:items-center md:gap-10 md:px-7 md:py-5">
-          <p className="font-mono text-label text-sky uppercase">
+          <p className="font-mono text-label text-sky uppercase max-md:text-[0.8125rem]">
             {current.day} · {leg + 1}/{method.legs.length}
           </p>
           <div key={leg} className="animate-[leg-in_0.6s_cubic-bezier(0.2,0.7,0.1,1)]" aria-live="polite">
             <h3 className="text-[1.125rem] font-medium tracking-[-0.01em] text-white md:text-[1.375rem]">{current.title}</h3>
             <p className="mt-1.5 max-w-[40rem] text-body text-white/90">{current.body}</p>
-            <p className="mt-2 font-mono text-label text-ember uppercase">{current.tag}</p>
+            <p className="mt-2 font-mono text-label text-ember uppercase max-md:text-[0.8125rem]">{current.tag}</p>
           </div>
           <div className="flex gap-1.5" aria-hidden="true">
             {method.legs.map((_, i) => (
