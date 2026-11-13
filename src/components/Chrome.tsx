@@ -24,6 +24,19 @@ function Progress() {
   return <div ref={ref} aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-0.5 origin-left bg-[linear-gradient(90deg,var(--color-ember),var(--color-sky))]" style={{transform: 'scaleX(0)'}} />;
 }
 
+/** Monogramma "AI" in un quadrato arancione con un punto azzurro; stesso disegno della favicon. */
+function Logo({className}: {className?: string}) {
+  return (
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false" className={className}>
+      <rect x="3" y="3" width="34" height="34" rx="9" fill="none" stroke="#ff8a3d" strokeWidth="2.4" />
+      <text x="20" y="25.5" textAnchor="middle" fontFamily="Geist Mono, ui-monospace, monospace" fontSize="16" fontWeight="500" fill="#f4f4f2">
+        AI
+      </text>
+      <circle cx="33" cy="7" r="3.4" fill="#7fc8ff" />
+    </svg>
+  );
+}
+
 export function Header() {
   const [open, setOpen] = useState(false);
 
@@ -44,9 +57,9 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 text-white">
       <Progress />
       <div className="flex items-center justify-between px-4 pt-4 sm:px-6 sm:pt-5 md:px-[4vw]">
-        <a href="#top" onClick={(e) => go(e)} className="-my-2.5 flex items-center gap-2.5 py-2.5" aria-label={`${brand.name} — torna in cima`}>
-          <i className="inline-block size-2.5 rounded-full bg-[linear-gradient(135deg,var(--color-ember),var(--color-sky))]" />
-          <span className="text-[0.9375rem] font-semibold tracking-[-0.01em]">{brand.name}</span>
+        <a href="#top" onClick={(e) => go(e)} className="-my-2 flex items-center gap-3 py-2" aria-label={`${brand.name} — torna in cima`}>
+          <Logo className="size-9 shrink-0 md:size-11" />
+          <span className="text-[1.3125rem] leading-none font-semibold tracking-[-0.02em] md:text-[1.75rem]">{brand.name}</span>
         </a>
         <nav aria-label="Principale" className="hidden items-center gap-8 md:flex">
           {nav.map((item) => (
